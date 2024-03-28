@@ -6,8 +6,14 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-8">
+      <!--NOTE: [27.2] Index Updates: MODIFY THE LOOK OF TH CARDS WITH COLORS AND STYLES.-->
       <h1>A pirate's life is for me</h1>
       <p>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.</p>
+      {% for post in blog.blogs %}
+      <h2><a href="blog/{{ post.slug }}.html">{{ post.headline }}</a></h2>
+      <h4>{{ post.date }}</h4>
+      <hr>
+      {% endfor %}
     </div>
   </div>
 </div>
